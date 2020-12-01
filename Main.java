@@ -20,8 +20,11 @@ public class Main{
     
     // System.out.println(plaintext);
     // fileScanner.close();
-    String m = "Encrypting with AEs!";
-
+    
+      
+    String str = "Encrypting with AEs!";
+    String ar[] = str.split("");
+    System.out.println(Arrays.toString(ar));
     char key[] = 
     
     {
@@ -31,10 +34,27 @@ public class Main{
       13, 14, 15, 16
     };
 
-    AESEncryption(m, key);
+    AESEncryption(ar, key);
 
   }
-  public static void AESEncryption(String message, char[] key){
+  public static void AESEncryption(String[] message, char[] key){
+    int byteSize = 16; 
+    String[][] state = new String[4][4];
+    for(int i = 0; i < byteSize; i++){
+      for(int row = 1; row < state.length; row++){
+        for(int col = 1; col < state[row].length; col++){
+          state[row][col] = message[i];
+        }
+      }
+    }
+
+    for(int i = 0; i< state.length; i++){
+      for(int j = 0; j < state[i].length; j++){
+        System.out.print(state[i][j] + " ");
+      }
+      System.out.println();
+    }
+    System.out.println(Arrays.toString(state));
     int roundsN = 1;
     keyExpansion();
     roundKey();
