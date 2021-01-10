@@ -1,0 +1,4 @@
+This is a test file. The reason why we are using the test file is so that both programs can run the same thing at the same time. 
+Therefore, in a controlled environment, we must use similar testing variables to maintain accuracy across all of our results.
+Because this is a test file, most of what you are reading is jibberish and me just typing whatever comes to mind. Please ignore most of this as this is only a test file.
+We are using this test file to test the runtimes of both RSA and ceaser cipher encryption to see which algorithm has a more efficient runtime. After this file, there will be one more to further test its capabilities.
